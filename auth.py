@@ -15,3 +15,15 @@ def login_user(username, password):
     user = cursor.fetchone()
     conn.close()
     return user
+
+predefined_username = "admin"
+predefined_password = "password123"
+
+# Register the predefined user (you can do this once during setup)
+register_user(predefined_username, predefined_password)
+
+# Example usage
+if login_user("admin", "password123"):
+    print("Login successful!")
+else:
+    print("Login failed.")
